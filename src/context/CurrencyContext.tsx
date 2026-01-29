@@ -34,7 +34,7 @@ const CurrencyContext = createContext<CurrencyContextType | undefined>(
 );
 
 export const CurrencyProvider = ({ children }: { children: ReactNode }) => {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState('INR');
 
   const formatPrice = (price: number) => {
     const rate = conversionRates[currency] || 1;

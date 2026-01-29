@@ -5,6 +5,8 @@ import AppSidebar from '@/components/AppSidebar';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/Header';
 import { CurrencyProvider } from '@/context/CurrencyContext';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export const metadata: Metadata = {
   title: 'ProductPulse',
@@ -31,22 +33,30 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <CurrencyProvider>
-          <SidebarProvider>
-            <div className="flex min-h-screen">
-              <AppSidebar />
-              <div className="flex-1">
-                <SidebarInset className="grid grid-rows-[auto_1fr] !p-0">
-                  <Header />
-                  <div className="overflow-y-auto p-4 sm:p-6 lg:p-8">
-                    {children}
-                  </div>
-                </SidebarInset>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <CurrencyProvider>
+            <SidebarProvider>
+              <div className="flex min-h-screen">
+                <AppSidebar />
+                <div className="flex-1">
+                  <SidebarInset className="grid grid-rows-[auto_1fr] !p-0">
+                    <Header />
+                    <div className="overflow-y-auto p-4 sm:p-6 lg:p-8">
+                      {children}
+                    </div>
+                  </SidebarInset>
+                </div>
               </div>
-            </div>
-          </SidebarProvider>
-        </CurrencyProvider>
-        <Toaster />
+            </SidebarProvider>
+          </CurrencyProvider>
+          <ThemeToggle />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
