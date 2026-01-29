@@ -11,6 +11,9 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 export const metadata: Metadata = {
   title: 'ProductPulse',
   description: 'Your smart shopping assistant',
+  icons: {
+    icon: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3ccircle cx='9' cy='21' r='1'/%3e%3ccircle cx='20' cy='21' r='1'/%3e%3cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3e%3c/svg%3e",
+  },
 };
 
 export default function RootLayout({
