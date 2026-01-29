@@ -25,24 +25,13 @@ export default async function ProductDetailPage({
     notFound();
   }
 
-  const [similarProducts, complementaryProductsData] = await Promise.all([
+  const [similarProducts, complementaryProducts] = await Promise.all([
     knnProductRecommendations({ productId: product.id }),
     getComplementaryProducts({
       productId: product.id,
       productCategory: product.category,
     }),
   ]);
-  
-  const complementaryProducts: Product[] = complementaryProductsData.map(p => ({
-    id: p.Product_ID,
-    name: p.Category, // Name is not provided, using category as a fallback
-    category: p.Category,
-    rating: p.Rating,
-    usersPurchased: p.Users_Purchased,
-    price: p.Price,
-    description: `A ${p.Category}.`, // Description not provided
-    image: p.Product_ID,
-  }));
 
   const placeholder = PlaceHolderImages.find((img) => img.id === product.image);
   const imageUrl = placeholder?.imageUrl ?? 'https://placehold.co/600x400';
@@ -88,7 +77,7 @@ export default async function ProductDetailPage({
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {similarProducts.map((p) => (
-              <ProductCard key={p.productId} product={{...p, id: p.productId, name: p.category, description: '', image: p.productId}} />
+              <ProductCard key={p.id} product={p} />
             ))}
           </div>
         </div>
