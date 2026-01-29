@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "P0001",
+      "description": "Stylish running shoes",
+      "imageUrl": "https://images.unsplash.com/photo-1726200334449-5381bf713721?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Ymx1ZSUyMHNob2VzfGVufDB8fHx8MTc2OTY3NDEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blue shoes"
+    },
+    {
+      "id": "P0002",
+      "description": "Classic leather shoes",
+      "imageUrl": "https://images.unsplash.com/photo-1556901500-99dabada00dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxicm93biUyMHNob2VzfGVufDB8fHx8MTc2OTY3NDEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brown shoes"
+    },
+    {
+      "id": "P0003",
+      "description": "Luxury chronograph watch",
+      "imageUrl": "https://images.unsplash.com/photo-1713618454890-46e027ee558c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzaWx2ZXIlMjB3YXRjaHxlbnwwfHx8fDE3Njk2NzQxMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silver watch"
+    },
+    {
+      "id": "P0004",
+      "description": "Minimalist sports watch",
+      "imageUrl": "https://images.unsplash.com/photo-1617265860128-e23ad88cf98d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibGFjayUyMHdhdGNofGVufDB8fHx8MTc2OTY3NDEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "black watch"
+    },
+    {
+      "id": "P0005",
+      "description": "Durable travel backpack",
+      "imageUrl": "https://images.unsplash.com/photo-1592172660411-6fabf62eeb1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmV5JTIwYmFja3BhY2t8ZW58MHx8fHwxNzY5Njc0MTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey backpack"
+    },
+    {
+      "id": "P0006",
+      "description": "Elegant leather handbag",
+      "imageUrl": "https://images.unsplash.com/photo-1756715240289-90b31a555e7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZWQlMjBoYW5kYmFnfGVufDB8fHx8MTc2OTY3NDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "red handbag"
+    },
+    {
+      "id": "P0007",
+      "description": "Latest flagship smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1653589048352-7c3b90241ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbWFydHBob25lJTIwc2NyZWVufGVufDB8fHx8MTc2OTY3NDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartphone screen"
+    },
+    {
+      "id": "P0008",
+      "description": "Budget-friendly smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1609001650223-aa7d7edccac1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaG9uZSUyMGJhY2t8ZW58MHx8fHwxNzY5Njc0MTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone back"
+    },
+    {
+      "id": "P0009",
+      "description": "Aviator sunglasses",
+      "imageUrl": "https://images.unsplash.com/photo-1566421966482-ad8076104d8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdW5nbGFzc2VzJTIwYmVhY2h8ZW58MHx8fHwxNzY5Njc0MTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunglasses beach"
+    },
+    {
+      "id": "P0010",
+      "description": "Slim leather wallet",
+      "imageUrl": "https://images.unsplash.com/photo-1612023395494-1c4050b68647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsZWF0aGVyJTIwd2FsbGV0fGVufDB8fHx8MTc2OTY3MTYxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather wallet"
+    },
+    {
+      "id": "P0011",
+      "description": "Noise-cancelling earbuds",
+      "imageUrl": "https://images.unsplash.com/photo-1667178173387-7e0cb51c0b4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aXJlbGVzcyUyMGVhcmJ1ZHN8ZW58MHx8fHwxNzY5NjcxMTc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless earbuds"
+    },
+    {
+      "id": "P0012",
+      "description": "Hiking boots",
+      "imageUrl": "https://images.unsplash.com/photo-1631287381310-925554130169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaWtpbmclMjBib290c3xlbnwwfHx8fDE3Njk1OTcwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hiking boots"
+    }
+  ]
 }
