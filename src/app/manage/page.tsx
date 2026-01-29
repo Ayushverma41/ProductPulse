@@ -34,8 +34,8 @@ export default async function ManageProductsPage() {
         subtitle="Add, edit, or remove products from your dataset."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-        <div className="lg:col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="lg:col-span-1">
           <Card>
             <CardHeader>
               <CardTitle>Add New Product</CardTitle>
@@ -48,7 +48,7 @@ export default async function ManageProductsPage() {
             </CardContent>
           </Card>
         </div>
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-1">
           <Card>
             <CardHeader>
               <CardTitle>Current Products</CardTitle>
