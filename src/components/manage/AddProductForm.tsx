@@ -1,6 +1,6 @@
 'use client';
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 import { addProductAction } from '@/lib/actions';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -30,7 +30,7 @@ type AddProductFormProps = {
 };
 
 export default function AddProductForm({ categories }: AddProductFormProps) {
-  const [state, formAction] = useFormState(addProductAction, {
+  const [state, formAction] = useActionState(addProductAction, {
     errors: {},
     success: false,
   });
