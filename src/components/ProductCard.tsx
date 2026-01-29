@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
@@ -5,12 +7,14 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import StarRating from './StarRating';
+import { useCurrency } from '@/context/CurrencyContext';
 
 type ProductCardProps = {
   product: Product;
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { formatPrice } = useCurrency();
   const placeholder = PlaceHolderImages.find((img) => img.id === product.image);
   const imageUrl = placeholder?.imageUrl ?? 'https://placehold.co/600x400';
   const imageHint = placeholder?.imageHint ?? 'product image';
@@ -39,7 +43,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </CardTitle>
           <div className="flex justify-between items-center">
             <p className="text-lg font-semibold text-primary">
-              ${product.price.toFixed(2)}
+              {formatPrice(product.price)}
             </p>
             <StarRating rating={product.rating} />
           </div>

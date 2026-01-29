@@ -4,6 +4,7 @@ import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import AppSidebar from '@/components/AppSidebar';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/Header';
+import { CurrencyProvider } from '@/context/CurrencyContext';
 
 export const metadata: Metadata = {
   title: 'ProductPulse',
@@ -30,19 +31,21 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <SidebarProvider>
-          <div className="flex min-h-screen">
-            <AppSidebar />
-            <div className="flex-1">
-              <SidebarInset className="grid grid-rows-[auto_1fr] !p-0">
-                <Header />
-                <div className="overflow-y-auto p-4 sm:p-6 lg:p-8">
-                  {children}
-                </div>
-              </SidebarInset>
+        <CurrencyProvider>
+          <SidebarProvider>
+            <div className="flex min-h-screen">
+              <AppSidebar />
+              <div className="flex-1">
+                <SidebarInset className="grid grid-rows-[auto_1fr] !p-0">
+                  <Header />
+                  <div className="overflow-y-auto p-4 sm:p-6 lg:p-8">
+                    {children}
+                  </div>
+                </SidebarInset>
+              </div>
             </div>
-          </div>
-        </SidebarProvider>
+          </SidebarProvider>
+        </CurrencyProvider>
         <Toaster />
       </body>
     </html>

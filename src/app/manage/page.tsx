@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
 import { addProductAction, deleteProductAction } from '@/lib/actions';
 import AddProductForm from '@/components/manage/AddProductForm';
+import DisplayPrice from '@/components/DisplayPrice';
 
 export default async function ManageProductsPage() {
   const [products, categories] = await Promise.all([
@@ -70,7 +71,7 @@ export default async function ManageProductsPage() {
                       <TableCell>{product.name}</TableCell>
                       <TableCell>{product.category}</TableCell>
                       <TableCell className="text-right">
-                        ${product.price.toFixed(2)}
+                        <DisplayPrice price={product.price} />
                       </TableCell>
                       <TableCell className="text-right">
                         {product.rating.toFixed(1)}

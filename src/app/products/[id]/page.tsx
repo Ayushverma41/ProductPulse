@@ -9,6 +9,7 @@ import { knnProductRecommendations } from '@/ai/flows/knn-product-recommendation
 import { getComplementaryProducts } from '@/ai/flows/complementary-products';
 import ProductCard from '@/components/ProductCard';
 import type { Product } from '@/lib/types';
+import DisplayPrice from '@/components/DisplayPrice';
 
 type ProductDetailPageProps = {
   params: {
@@ -62,7 +63,7 @@ export default async function ProductDetailPage({
             </span>
           </div>
           <p className="text-3xl font-bold text-primary mb-6">
-            ${product.price.toFixed(2)}
+            <DisplayPrice price={product.price} />
           </p>
           <p className="text-muted-foreground leading-relaxed">
             {product.description}
