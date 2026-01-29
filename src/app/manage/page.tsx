@@ -28,7 +28,7 @@ export default async function ManageProductsPage() {
   ]);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-7xl mx-auto">
       <PageHeader
         title="Manage Products"
         subtitle="Add, edit, or remove products from your dataset."
