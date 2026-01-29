@@ -7,7 +7,7 @@ let products: Product[] = [
     category: 'Shoes',
     rating: 4.5,
     usersPurchased: 150,
-    price: 799.99,
+    price: 25.99,
     description:
       'Lightweight and comfortable running shoes, perfect for daily training and marathons. Features breathable mesh and responsive cushioning.',
     image: 'P0001',
@@ -18,7 +18,7 @@ let products: Product[] = [
     category: 'Shoes',
     rating: 4.8,
     usersPurchased: 250,
-    price: 1299.99,
+    price: 45.99,
     description:
       'Classic leather loafers for a sharp, professional look. Hand-stitched with premium materials for durability and comfort.',
     image: 'P0002',
@@ -29,7 +29,7 @@ let products: Product[] = [
     category: 'Watches',
     rating: 4.9,
     usersPurchased: 80,
-    price: 4999.0,
+    price: 59.99,
     description:
       'A masterpiece of horology, this watch features a complex tourbillon movement and a sleek, modern design.',
     image: 'P0003',
@@ -40,7 +40,7 @@ let products: Product[] = [
     category: 'Watches',
     rating: 4.3,
     usersPurchased: 300,
-    price: 899.99,
+    price: 29.99,
     description:
       'A rugged and reliable digital watch with multiple functions, including a stopwatch, alarm, and water resistance up to 100m.',
     image: 'P0004',
@@ -51,7 +51,7 @@ let products: Product[] = [
     category: 'Bags',
     rating: 4.7,
     usersPurchased: 180,
-    price: 699.99,
+    price: 22.99,
     description:
       'A versatile and durable backpack with multiple compartments, perfect for hiking, travel, or daily commute.',
     image: 'P0005',
@@ -62,7 +62,7 @@ let products: Product[] = [
     category: 'Bags',
     rating: 4.6,
     usersPurchased: 120,
-    price: 1499.99,
+    price: 49.99,
     description:
       'An elegant and spacious leather satchel, combining style and functionality for the modern woman.',
     image: 'P0006',
@@ -73,7 +73,7 @@ let products: Product[] = [
     category: 'Smartphones',
     rating: 4.8,
     usersPurchased: 500,
-    price: 4899.99,
+    price: 58.99,
     description:
       'The latest in smartphone technology, featuring a stunning edge-to-edge display, pro-grade camera system, and all-day battery life.',
     image: 'P0007',
@@ -84,7 +84,7 @@ let products: Product[] = [
     category: 'Smartphones',
     rating: 4.4,
     usersPurchased: 800,
-    price: 1399.99,
+    price: 35.99,
     description:
       'A powerful and affordable smartphone that delivers a smooth experience, great camera quality, and a large, vibrant display.',
     image: 'P0008',
@@ -95,7 +95,7 @@ let products: Product[] = [
     category: 'Sunglasses',
     rating: 4.6,
     usersPurchased: 450,
-    price: 959.99,
+    price: 15.99,
     description:
       'Timeless aviator sunglasses with polarized lenses that provide 100% UV protection and reduce glare for crystal-clear vision.',
     image: 'P0009',
@@ -106,7 +106,7 @@ let products: Product[] = [
     category: 'Men Wallet',
     rating: 4.9,
     usersPurchased: 600,
-    price: 549.99,
+    price: 9.99,
     description:
       'A slim and stylish leather wallet with RFID protection, designed to hold your essentials without the bulk.',
     image: 'P0010',
@@ -117,7 +117,7 @@ let products: Product[] = [
     category: 'Earbuds',
     rating: 4.7,
     usersPurchased: 1200,
-    price: 2490.0,
+    price: 39.99,
     description:
       'Immerse yourself in sound with active noise cancellation, transparency mode, and a customizable fit for all-day comfort.',
     image: 'P0011',
@@ -128,7 +128,7 @@ let products: Product[] = [
     category: 'Shoes',
     rating: 4.7,
     usersPurchased: 220,
-    price: 1189.99,
+    price: 42.99,
     description:
       'Waterproof and breathable hiking boots designed for the toughest trails. Provides excellent traction and ankle support.',
     image: 'P0012',
