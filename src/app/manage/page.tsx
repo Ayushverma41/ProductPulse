@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
-import { addProductAction, deleteProductAction } from '@/lib/actions';
+import { deleteProductAction } from '@/lib/actions';
 import AddProductForm from '@/components/manage/AddProductForm';
 import DisplayPrice from '@/components/DisplayPrice';
 
@@ -28,85 +28,92 @@ export default async function ManageProductsPage() {
   ]);
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <PageHeader
         title="Manage Products"
         subtitle="Add, edit, or remove products from your dataset."
       />
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Add New Product</CardTitle>
-          <CardDescription>
-            Fill out the form below to add a new product.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <AddProductForm categories={categories} />
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Current Products</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="border rounded-lg">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>ID</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Category</TableHead>
-                  <TableHead className="text-right">Price</TableHead>
-                  <TableHead className="text-right">Rating</TableHead>
-                  <TableHead className="text-right">Actions</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {products.length > 0 ? (
-                  products.map((product) => (
-                    <TableRow key={product.id}>
-                      <TableCell className="font-medium">{product.id}</TableCell>
-                      <TableCell>{product.name}</TableCell>
-                      <TableCell>{product.category}</TableCell>
-                      <TableCell className="text-right">
-                        <DisplayPrice price={product.price} />
-                      </TableCell>
-                      <TableCell className="text-right">
-                        {product.rating.toFixed(1)}
-                      </TableCell>
-                      <TableCell className="text-right">
-                        <form action={deleteProductAction}>
-                          <input
-                            type="hidden"
-                            name="productId"
-                            value={product.id}
-                          />
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            type="submit"
-                            aria-label="Delete product"
-                          >
-                            <Trash2 className="h-4 w-4 text-destructive" />
-                          </Button>
-                        </form>
-                      </TableCell>
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+        <div className="lg:col-span-2">
+          <Card>
+            <CardHeader>
+              <CardTitle>Add New Product</CardTitle>
+              <CardDescription>
+                Fill out the form below to add a new product.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <AddProductForm categories={categories} />
+            </CardContent>
+          </Card>
+        </div>
+        <div className="lg:col-span-3">
+          <Card>
+            <CardHeader>
+              <CardTitle>Current Products</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="border rounded-lg">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>ID</TableHead>
+                      <TableHead>Name</TableHead>
+                      <TableHead>Category</TableHead>
+                      <TableHead className="text-right">Price</TableHead>
+                      <TableHead className="text-right">Rating</TableHead>
+                      <TableHead className="text-right">Actions</TableHead>
                     </TableRow>
-                  ))
-                ) : (
-                  <TableRow>
-                    <TableCell colSpan={6} className="text-center">
-                      No products found.
-                    </TableCell>
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </div>
-        </CardContent>
-      </Card>
+                  </TableHeader>
+                  <TableBody>
+                    {products.length > 0 ? (
+                      products.map((product) => (
+                        <TableRow key={product.id}>
+                          <TableCell className="font-medium">
+                            {product.id}
+                          </TableCell>
+                          <TableCell>{product.name}</TableCell>
+                          <TableCell>{product.category}</TableCell>
+                          <TableCell className="text-right">
+                            <DisplayPrice price={product.price} />
+                          </TableCell>
+                          <TableCell className="text-right">
+                            {product.rating.toFixed(1)}
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <form action={deleteProductAction}>
+                              <input
+                                type="hidden"
+                                name="productId"
+                                value={product.id}
+                              />
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                type="submit"
+                                aria-label="Delete product"
+                              >
+                                <Trash2 className="h-4 w-4 text-destructive" />
+                              </Button>
+                            </form>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    ) : (
+                      <TableRow>
+                        <TableCell colSpan={6} className="text-center">
+                          No products found.
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
