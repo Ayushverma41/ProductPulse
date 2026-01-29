@@ -3,6 +3,7 @@ import './globals.css';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import AppSidebar from '@/components/AppSidebar';
 import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'ProductPulse',
@@ -33,8 +34,11 @@ export default function RootLayout({
           <div className="flex min-h-screen">
             <AppSidebar />
             <div className="flex-1">
-              <SidebarInset>
-                <div className="p-4 sm:p-6 lg:p-8">{children}</div>
+              <SidebarInset className="grid grid-rows-[auto_1fr] !p-0">
+                <Header />
+                <div className="overflow-y-auto p-4 sm:p-6 lg:p-8">
+                  {children}
+                </div>
               </SidebarInset>
             </div>
           </div>
